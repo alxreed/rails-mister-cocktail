@@ -1,0 +1,28 @@
+<div class="cover"></div>
+<div class="container">
+  <div class="le-cocktail">
+    <div class="contenu">
+      <div class="titre">
+        <h1><%= @cocktail.name %></h1>
+      </div>
+      <%= link_to new_cocktail_dose_path(@cocktail) do %>
+      <div class="add-dose">
+      <i class="fas fa-plus"></i>
+      <p>Add a new dose</p>
+      </div>
+      <% end %>
+    <div class="finalbutton">
+      <%= link_to 'Back', cocktails_path %>
+    </div>
+    </div>
+    <div class="les-doses">
+      <h4>Doses</h4>
+      <% @doses.each do |dose| %>
+      <div class="dose">
+        <i class="fas fa-glass-martini-alt"></i>
+        <p><%= dose.description %> <%= dose.ingredient.name %></p>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
