@@ -722,6 +722,19 @@
   resolved "https://registry.yarnpkg.com/@material/feature-targeting/-/feature-targeting-0.44.1.tgz#afafc80294e5efab94bee31a187273d43d34979a"
   integrity sha512-90cc7njn4aHbH9UxY8qgZth1W5JgOgcEdWdubH1t7sFkwqFxS5g3zgxSBt46TygFBVIXNZNq35Xmg80wgqO7Pg==
 
+"@material/form-field@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@material/form-field/-/form-field-2.1.1.tgz#c90b4f14cddc0d333e86e13b6f1b206b9b72ec64"
+  integrity sha512-5hbW+jQoC5svJlTgaQG5MH+4MVtL5mbMfCHhfbvOJQ/kVPZpGKEJfdWCWvJcyrh/1KLPYU3OTh6k69OC3qcDCg==
+  dependencies:
+    "@material/base" "^1.0.0"
+    "@material/feature-targeting" "^0.44.1"
+    "@material/ripple" "^2.1.1"
+    "@material/rtl" "^0.42.0"
+    "@material/theme" "^1.1.0"
+    "@material/typography" "^1.0.0"
+    tslib "^1.9.3"
+
 "@material/ripple@^2.1.1":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-2.1.1.tgz#850e44bafe9db962f400c7e067eb28c1cb11010b"
@@ -750,6 +763,13 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@material/theme/-/theme-1.1.0.tgz#9c95dd804168c23c30589fcf09ecc5af5b3d1adc"
   integrity sha512-YYUV9Rhbx4r/EMb/zoOYJUWjhXChNaLlH1rqt3vpNVyxRcxGqoVMGp5u1XALBCFiD9dACPKLIkKyRYa928nmPQ==
+  dependencies:
+    "@material/feature-targeting" "^0.44.1"
+
+"@material/typography@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@material/typography/-/typography-1.0.0.tgz#327ecfcac5ee3af8a3a102f3f125a761202f4189"
+  integrity sha512-Oeqbjci1cC7jTE8/n3dwnkqKe9ZeWiaE+rgMtRYtRFw1HvAw14SpGA5EEAS/Li2Hu2KZ50FYCe3HYqShfxtChA==
   dependencies:
     "@material/feature-targeting" "^0.44.1"
 
@@ -3962,6 +3982,11 @@ map-visit@^1.0.0:
   integrity sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
   dependencies:
     object-visit "^1.0.0"
+
+material@^0.3.10:
+  version "0.3.10"
+  resolved "https://registry.yarnpkg.com/material/-/material-0.3.10.tgz#b3646e0f348073b6ebd22d42bc6873cbc1fd53f7"
+  integrity sha512-9yGBviZdUx6xKVZafHLheJeJ8tufeaVENRsb5RBNVQQqvw4sndz98J1ViQ3Q+ARTSP3sEwhIxZT5Nx1PaFj3XA==
 
 md5.js@^1.3.4:
   version "1.3.5"

@@ -7,6 +7,7 @@ ruby '2.5.3'
 gem 'rails', '~> 5.2.3'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
+gem 'faker'
 # Use Puma as the app server
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'

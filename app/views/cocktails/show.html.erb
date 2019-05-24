@@ -1,4 +1,8 @@
-<div class="cover"></div>
+<% if @cocktail.photo.url %>
+<div class="cover" style="background-image: url('<%= cl_image_path @cocktail.photo%>')"></div>
+<% else %>
+<div class="cover" style="background-image: url('https://source.unsplash.com/1600x900/?alcohol')"></div>
+<% end %>
 <div class="container">
   <div class="le-cocktail">
     <div class="contenu">
@@ -15,14 +19,29 @@
       <%= link_to 'Back', cocktails_path %>
     </div>
     </div>
+    <div class="plus">
     <div class="les-doses">
       <h4>Doses</h4>
       <% @doses.each do |dose| %>
       <div class="dose">
         <i class="fas fa-glass-martini-alt"></i>
-        <p><%= dose.description %> <%= dose.ingredient.name %></p>
+        <p><%= dose.description %> of <%= dose.ingredient.name %></p>
       </div>
       <% end %>
+    </div>
+        <div class="les-doses">
+      <h4>Reviews</h4>
+      <% @cocktail.reviews.each do |review| %>
+      <div class="dose review">
+        <p><%= review.content %></p>
+      </div>
+      <% end %>
+      <%= link_to new_cocktail_review_path(@cocktail) do %>
+      <div class="add-review">
+      <p>New review</p>
+      </div>
+      <% end %>
+    </div>
     </div>
   </div>
 </div>

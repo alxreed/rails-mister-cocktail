@@ -1,0 +1,14 @@
+<div class="container">
+<h1>Add a new review</h1>
+<div class="content">
+<div class="form">
+  <%= simple_form_for [@cocktail, @review] do |f| %>
+    <%= f.input :content, class: "form-control" %>
+    <%= f.button :submit, class: "btn btn-secondary" %>
+  <% end %>
+</div>
+    <div class="finalbutton2">
+      <%= link_to 'Back', cocktail_path(@cocktail) %>
+    </div>
+</div>
+</div>

@@ -2,9 +2,17 @@
 <h1>All Cocktails</h1>
 <div class="cocktails">
 <% @cocktails.each do |c| %>
+<% if c.photo.url %>
+  <div class="cocktail">
+  <div class="cock-img" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+          url('<%= cl_image_path c.photo%>')"><h4><%= c.name %></h4>
+  </div>
+<% else %>
 <div class="cocktail">
-<div class="cock-img"><h4><%= c.name %></h4>
+<div class="cock-img" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+         url('https://source.unsplash.com/1600x900/?alcohol')"><h4><%= c.name %></h4>
 </div>
+<% end %>
 <div class="more-infos">
 <%= link_to 'More infos', cocktail_path(c) %>
 </div>
@@ -12,3 +20,4 @@
 <% end %>
 </div> 
 </div>
+

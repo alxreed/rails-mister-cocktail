@@ -22,14 +22,13 @@
   }
   &:hover {
     .cock-img {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://source.unsplash.com/1600x900/?alcohol");
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
     }
   }
   .cock-img {
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     padding: 15px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("https://source.unsplash.com/1600x900/?alcohol");
     background-size: cover;
     background-position: center;
     width: 100%;

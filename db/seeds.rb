@@ -16,6 +16,7 @@ puts "creating cocktails..."
 
 Ingredient.destroy_all
 Cocktail.destroy_all
+Review.destroy_all
 
 list.each do |i|
   Ingredient.create!(name: i["strIngredient1"])
@@ -27,4 +28,8 @@ list2 = JSON.parse(cocktail)["drinks"]
 
 list2.each do |c|
   Cocktail.create!(name: c["strDrink"])
+end
+
+200.times do
+  Review.create!(content: Faker::Lorem.paragraph(4), cocktail: Cocktail.all.sample)
 end

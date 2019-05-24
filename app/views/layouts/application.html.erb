@@ -14,7 +14,11 @@
   <div class="nav-bar">
     <%= link_to 'Cocktails Zebi', cocktails_path %>
     <div class="div-right">
-    <%= link_to 'Add a new cocktail', new_cocktail_path %>
+        <form action="/cocktails" class="form">
+          <input type="text" name="search" placeholder="votre cocktail" class="recherche">
+          <input type="submit" value="Rechercher" class="btnrecherche">
+        </form>
+      <%= link_to 'Add a new cocktail', new_cocktail_path %>
     </div>
   </div>
     <%= yield %>
