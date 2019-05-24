@@ -14,9 +14,11 @@ list = JSON.parse(ingredient_list)["drinks"]
 
 puts "creating cocktails..."
 
+Dose.destroy_all
 Ingredient.destroy_all
-Cocktail.destroy_all
 Review.destroy_all
+Cocktail.destroy_all
+
 
 list.each do |i|
   Ingredient.create!(name: i["strIngredient1"])
@@ -33,3 +35,9 @@ end
 200.times do
   Review.create!(content: Faker::Lorem.paragraph(4), cocktail: Cocktail.all.sample)
 end
+
+200.times do
+  Dose.create(description: "#{rand(1..100)} cl", cocktail: Cocktail.all.sample, ingredient: Ingredient.all.sample)
+end
+
+puts "ok"
